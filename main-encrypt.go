@@ -21,7 +21,7 @@ func encrpyt(secret_key, input_file string) {
 	processed_key := processKey(secret_key)
 	processed_input := processFile(input_file)
 	ciphertext := vigenere("enc", processed_key, processed_input)
-	fmt.Println(ciphertext)
+	fmt.Print(ciphertext)
 	// writeToFile("ciphertext.txt", ciphertext)
 }
 

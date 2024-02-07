@@ -21,7 +21,7 @@ func decrpyt(secret_key, input_file string) {
 	processed_key := processKey(secret_key)
 	processed_input := processFile(input_file)
 	deciphertext := vigenere("dec", processed_key, processed_input)
-	fmt.Println(deciphertext)
+	fmt.Print(deciphertext)
 	// writeToFile("deciphertext.txt", deciphertext)
 }
 
