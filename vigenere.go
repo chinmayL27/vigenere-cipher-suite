@@ -31,7 +31,7 @@ func main() {
 	if strings.Contains(os.Args[0], "vigenere-encrypt") {
 		fmt.Println("Encrypting!")
 		encrpyt(secret_key, input_file)
-	} else if strings.Contains(os.Args[0], "vigenere-encrypt") {
+	} else if strings.Contains(os.Args[0], "vigenere-decrypt") {
 		fmt.Println("Decrypting!")
 		decrpyt(secret_key, input_file)
 	} else {
