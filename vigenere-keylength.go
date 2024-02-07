@@ -7,6 +7,7 @@ import (
 	"log"
 	"bufio"
 	"math"
+	"strconv"
 )
 
 /*
@@ -31,7 +32,7 @@ var letterFreqEng = [26]float64 {
 								}
 
 func main() {
-	if len(os.Args) != 2 {
+	if len(os.Args) > 3 {
 		log.Fatal("Usage: ./<vigenere-keylength/vigenere-cryptanalysis> <input_file>")
 	}
 	
@@ -40,7 +41,8 @@ func main() {
 	if strings.Contains(os.Args[0], "vigenere-keylength") {
 		fmt.Println(getKeylength(ciphertext))
 	} else if strings.Contains(os.Args[0], "vigenere-cryptanalyze") {
-		cryptAnalysis(ciphertext)
+		keylength, _ := strconv.Atoi(os.Args[2])
+		cryptAnalysis(ciphertext, keylength)
 	} else {
 		log.Fatal("Invalid command!!")	
 	}
@@ -131,8 +133,8 @@ func calulateIC(group string) float64 {
 	return cumulativeProb
 }
 
-func cryptAnalysis(ciphertext string) {
-	keylength := getKeylength(ciphertext)
+func cryptAnalysis(ciphertext string, keylength int) {
+	// keylength := getKeylength(ciphertext)
 	// fmt.Println("-----", keylength)
 
 	proposedKey := ""
