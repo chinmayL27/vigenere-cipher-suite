@@ -1,0 +1,7 @@
+{
+    "work_dir": ".",
+    "encrypt": "vigenere.go",
+    "decrypt": "cmd/decryption/main.go",
+    "keylength": "cmd/keylength/main.go",
+    "cryptanalyze": "cmd/cryptanalyze/main.go"
+  }
