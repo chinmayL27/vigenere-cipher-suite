@@ -1,7 +1,7 @@
 {
     "work_dir": ".",
-    "encrypt": "vigenere.go",
-    "decrypt": "vigenere.go",
-    "keylength": "vigenere-keylength.go",
-    "cryptanalyze": "vigenere-keylength.go"
+    "encrypt": "main-encrypt.go",
+    "decrypt": "main-decrypt.go",
+    "keylength": "main-keylength.go",
+    "cryptanalyze": "main-cryptanalyze.go"
   }
