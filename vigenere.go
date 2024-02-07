@@ -29,10 +29,10 @@ func main() {
 	input_file := os.Args[2]
 
 	if strings.Contains(os.Args[0], "vigenere-encrypt") {
-		fmt.Println("Encrypting!")
+		// fmt.Println("Encrypting!")
 		encrpyt(secret_key, input_file)
 	} else if strings.Contains(os.Args[0], "vigenere-decrypt") {
-		fmt.Println("Decrypting!")
+		// fmt.Println("Decrypting!")
 		decrpyt(secret_key, input_file)
 	} else {
 		log.Fatal("Invalid command!!")	
