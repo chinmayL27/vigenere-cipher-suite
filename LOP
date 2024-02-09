@@ -1,4 +1,11 @@
-The primary weakness of the Vigenère cipher is the repeating nature of its key, where if a cryptanalyst correctly guesses the key's length n, the cipher text can be treated as n interleaved Caesar ciphers, which can easily be broken individually. 
-And the key length may be discovered by brute force testing each possible value of n (with computational limits).
+The Vigenère cipher's primary weakness is its key's repeating nature, where if a cryptanalyst correctly guesses the key's length n, the cipher text can be treated as n interleaved Caesar ciphers, which can easily be broken individually. 
+The key length may be discovered by brute force testing each possible value of n (with computational limits).
 
-By using a key of length equal to atleast the message length, we get closer to the notion of perfect security provided certain conditions on the key selected from the key space.
+By using a key of length equal to at least the message length, we get closer to the notion of perfect security provided certain conditions on the key selected from the key space.
+
+  1. Random variable k (key) is uniformly distributed over K (Key Space)
+and since the property => Pr[E(k, m0) = c] = Pr[E(k, m1) = c] for all m0, m1 ∈ M, and all c ∈ C
+
+Thus, we can say that this encryption scheme is perfectly secure. And provides support for the intuition that the encrypted message remains “well hidden,” even after seeing its encryption.
+
+NOTE: This is a one-time pad property and essentially eliminates the weakness in Vigenère due to pattern analysis.
